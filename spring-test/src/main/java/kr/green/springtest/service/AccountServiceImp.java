@@ -18,7 +18,7 @@ public class AccountServiceImp implements AccountService{
 	@Override
 	public AccountVo signin(AccountVo loginInfo) {
 		AccountVo user = accountDao.getAccount(loginInfo.getId());
-		if(passwordEncoder.matches(loginInfo.getPw(),user.getPw()))
+		if(user !=null && passwordEncoder.matches(loginInfo.getPw(),user.getPw()))
 		return user;
 		return null;
 	}
