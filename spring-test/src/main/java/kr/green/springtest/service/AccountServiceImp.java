@@ -32,5 +32,11 @@ public class AccountServiceImp implements AccountService{
 		accountDao.setAccount(userInfo);
 		return true;
 	}
-
+//아이디 중복 검사
+	@Override
+	public boolean isDuplicated(String id) {
+		if(accountDao.getAccount(id) != null)
+			return true;
+		return false;
+	}
 }

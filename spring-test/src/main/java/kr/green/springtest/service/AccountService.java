@@ -8,4 +8,6 @@ public interface AccountService {
 
 	public boolean signup(AccountVo userInfo);
 
+	public boolean isDuplicated(String id);
+
 }
