@@ -12,4 +12,11 @@ public interface BoardDao {
 
 	public void setBoard(@Param("board")BoardVo board);
 
+//	public BoardVo readBoard(@Param("id")Integer id);
+
+	public BoardVo getBoard(@Param("id")Integer id);
+
+//	public BoardVo delBoard(@Param("state")String state);
+
+	public void updateBoard(@Param("board")BoardVo board);
 }

@@ -17,6 +17,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		//AccountVo user = (AccountVo)session.getAttribute("user");		
 		if(user == null) {
 			response.sendRedirect(request.getContextPath()+"/");
+			return false;
 		}
 		return true;
 	}
