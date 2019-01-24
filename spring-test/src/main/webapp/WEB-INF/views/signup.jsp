@@ -59,6 +59,7 @@
     		alert("중복된 아이디입니다. 다른 아이디를 입력하세요");
     		return false;
     	}
+    	$('#form').submit();
     	return true;
     })
 	</script>
